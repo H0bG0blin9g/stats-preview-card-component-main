@@ -32,12 +32,23 @@ h1 {
     line-height: 1;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 .card {
     width: 350px;
     margin: 0 auto;
     text-align: center;
     background-color: var(--dark-desaturated-blue);
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .top-img {
@@ -88,7 +99,7 @@ p.upper {
 }
 
 @media screen and (min-width: 376px) {
-    
+
 }
 
 .attribution { font-size: 11px; text-align: center; padding-top: 60px; }
