@@ -60,7 +60,7 @@ h1 {
 }
 
 .overlay {
-    height: 100%;
+    min-height: 250px;
     background-color: var(--soft-violet);
     opacity: 0.7;
     border-radius: 10px 10px 0 0;
