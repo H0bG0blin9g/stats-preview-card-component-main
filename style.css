@@ -55,11 +55,24 @@ h1 {
     width: 100%;
     min-height: 250px;
     background-image: url(./images/image-header-mobile.jpg); 
-    background-color: var(--soft-violet);
     background-size: cover;
-    background-blend-mode: multiply;
     border-radius: 10px 10px 0 0;
-    opacity: 0.8;
+}
+
+.overlay {
+    height: 100%;
+    background-color: var(--soft-violet);
+    opacity: 0.7;
+    border-radius: 10px 10px 0 0;
+}
+
+.desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    justify-items: center; 
 }
 
 h1 {
@@ -77,7 +90,9 @@ h1.title span {
 }
 
 .counter {
-
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;    
 }
 
 .counter div h2 {
@@ -89,6 +104,7 @@ h1.title span {
     padding: 0 0 20px 0;
 }
 
+
 p.upper {
     text-transform: uppercase;
     color: var(--slightly-transparent-white);
@@ -98,9 +114,48 @@ p.upper {
     letter-spacing: 1px;
 }
 
-@media screen and (min-width: 376px) {
-
-}
-
 .attribution { font-size: 11px; text-align: center; padding-top: 60px; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (min-width: 1150px) {
+    .container {
+        height: 500px;
+        flex-direction: row;
+    }
+    .card {
+        width: auto;
+        flex-direction: row-reverse;
+        justify-content: start;
+        margin: 20px;
+        flex-shrink: 0;
+    }
+    .top-img {
+        background-image: url(./images/image-header-desktop.jpg);
+        background-position: center/cover;
+        min-height: 350px;
+        border-radius: 0 10px 10px 0;
+        min-width: 50%;
+    }
+    .overlay {
+        border-radius: 0 10px 10px 0;
+        min-height: 350px;
+    }
+
+    .desc {
+        min-width: auto;
+    }
+
+    .content, h1 {
+        text-align: left;
+        margin-left: 50px;
+        margin-right: 70px;
+    }
+    .counter {
+        flex-direction: row;
+        align-self: flex-start;
+        justify-content: space-around;
+        min-width: 70%;
+        margin-left: 50px;
+        text-align: left;
+    }
+}
